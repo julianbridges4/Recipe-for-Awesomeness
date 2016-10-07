@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+<form>
+  <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :author %>
     <%= f.text_field :author %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :recipe_post %>
     <%= f.text_area :recipe_post %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit %>
+
+</form>
+
 <% end %>
