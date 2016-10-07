@@ -1,19 +1,18 @@
 <p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">
+			<%= @recipe.title %>
+		</div>		
+	</div>
+	<div class="panel-body">
+		<p>By <%= @recipe.author %> on
+        <%= @recipe.created_at.strftime('%m/%d/%Y at %I:%M%p' ) %></p><br>
+        <p><%= @recipe.recipe_post %></p>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Edit', edit_recipe_path(@recipe), class: "btn btn-warning" %>
+		<%= link_to 'Back', recipes_path, class: "btn btn-danger" %>
+	</div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @recipe.title %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @recipe.author %>
-</p>
-
-<p>
-  <strong>Recipe post:</strong>
-  <%= @recipe.recipe_post %>
-</p>
-
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
