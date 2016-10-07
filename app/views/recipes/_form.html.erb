@@ -13,21 +13,18 @@
 
 <form>
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :author %>
-    <%= f.text_field :author %>
+    <%= f.text_field :author, class: "form-control", placeholder: "Author" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :recipe_post %>
-    <%= f.text_area :recipe_post %>
+    <%= f.text_area :recipe_post, class: "form-control", placeholder: "Recipe Post" %>
   </div>
 
-  <%= f.submit %>
+  <button type="submit" class="btn btn-default"><%= f.submit %></button>
 
 </form>
 
