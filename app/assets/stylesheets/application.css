@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	background-color: firebrick;
+}
+.container {
+	background-color: grey;
+	border-radius: 5px;
+}
