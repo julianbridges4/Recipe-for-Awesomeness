@@ -6,7 +6,7 @@
 		</div>		
 	</div>
 	<div class="panel-body">
-		<p>By <%= @recipe.user.email %> on
+		<p>By <%= @recipe.user.username %> on
         <%= @recipe.created_at.strftime('%m/%d/%Y at %I:%M%p' ) %></p><br>
         <p><%= @recipe.recipe_post %></p>
 	</div>

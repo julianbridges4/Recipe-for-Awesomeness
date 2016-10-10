@@ -10,7 +10,7 @@
         <%= link_to recipe.title, recipe %>
       </div>
       <div class="panel-body">
-        By <%= recipe.user.email %> on
+        By <%= recipe.user.username %> on
         <%= recipe.created_at.strftime('%m/%d/%Y at %I:%M%p' ) %><br>
         <%= recipe.recipe_post[0...300] %>...
         <%= link_to "Read More", recipe %>
