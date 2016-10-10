@@ -9,6 +9,9 @@
 		<p>By <%= @recipe.user.username %> on
         <%= @recipe.created_at.strftime('%m/%d/%Y at %I:%M%p' ) %></p><br>
         <p><%= @recipe.recipe_post %></p>
+        <% if @recipe.avatar_file_name != nil %>
+        	<%= image_tag @recipe.avatar.url(:medium), class: "img-responsive" %>
+        <% end %>
 	</div>
 	<div class="panel-footer">
 		<%= link_to 'Edit', edit_recipe_path(@recipe), class: "btn btn-warning" %>
