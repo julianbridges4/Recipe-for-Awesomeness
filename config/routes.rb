@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
 root 'recipes#index'
 
+get 'your_recipes' => 'recipes#your_recipes'
+
 end
+
+
 
 

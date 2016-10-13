@@ -1,0 +1,18 @@
+<% current_user.recipes.each do |recipe| %>
+	<div class="col-md-12">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<%= link_to recipe.title, recipe %>
+			</div>
+			<div class="panel-body">
+				<p><span class="posted-at"><%= recipe.created_at.strftime('%m/%d/%Y at %I:%M%p') %></span></p>
+				<p><%= recipe.recipe_post[0..150] %>...[<%= link_to "READ MORE", recipe %>]</p>
+			</div>
+			<div class="panel-footer">
+				<%= link_to 'Show', recipe, class: "btn btn-primary" %>
+				<%= link_to 'Edit', edit_recipe_path(recipe), class: "btn btn-warning" %>
+				<%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+			</div>
+		</div>
+	</div>
+<% end %>
